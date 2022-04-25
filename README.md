@@ -1,6 +1,6 @@
-#Installation
+# Installation
 
-###Step 1: Download the plugin
+### Step 1: Download the plugin
 Open a command console, enter your project directory and execute the 
 following command to download the latest stable version of this bundle:
 
@@ -11,7 +11,7 @@ following command to download the latest stable version of this bundle:
 This command requires you to have Composer [installed globally](https://getcomposer.org/doc/00-intro.md), as explained in the installation 
 chapter of the Composer documentation.
 
-###Step 2: Enable the plugin
+### Step 2: Enable the plugin
 Then, enable the plugin by adding it to the list of registered 
 plugins/bundles in config/bundles.php file of your project:
 
@@ -26,9 +26,9 @@ return [
 ];
 ```
 
-###Step 3: Configure the plugin
+### Step 3: Configure the plugin
 
-####Update Channel Model
+#### Update Channel Model
 Your Entity Channel has to implement ```\Scaleflex\SyliusCloudimagePlugin\Model\ExtendedChannelInterface``` 
 You can use Trait ```\Scaleflex\SyliusCloudimagePlugin\Model\ExtendedChannelTrait```
 
@@ -43,7 +43,7 @@ sylius_channel:
                 model: App\Entity\Channel #Your Channel Model
 ```
 
-####Update Channel Form
+#### Update Channel Form
 Include ```{{ include('@ScaleflexSyliusCloudimagePlugin/Admin/Channel/extendedChannelForm.html.twig') }}```
 in your ```templates/bundles/SyliusAdminBundle\Channel\_form.html.twig```
 
@@ -90,7 +90,7 @@ This setting is for advanced users only and allows to inject a custom JS functio
 
 
 
-####Include Script
+#### Include Script
 You can listen to any template events to include our script:
 - Script ```@ScaleflexSyliusCloudimagePlugin\Shop\cloudimageScript.html.twig```
 - Process ```@ScaleflexSyliusCloudimagePlugin\Shop\cloudimageProcess.html.twig```
@@ -108,7 +108,7 @@ sylius_ui:
 ```
 
 
-####Override Template
+#### Override Template
 To process your image through Cloudimage you have two ways to implement
 
 - Way 1: Use ```ci_src(path)``` Twig Function
