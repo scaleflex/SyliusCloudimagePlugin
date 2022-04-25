@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: Scaleflex\SyliusCloudimagePlugin
+        psr4_prefix: Scaleflex\SyliusCloudimagePlugin

@@ -1,0 +1,16 @@
+---
+scaleflex_sylius_cloudimage:
+  ui:
+    title: Scaleflex Cloudimage
+  form:
+    status: Status
+    token: Token
+    do_not_replace_url: Use origin URL
+    ignore_node_img_size: Ignore Image Size Node
+    ignore_styled_image_size: Ignore Image Size Style
+    lazy_load: Lazy Loading
+    ignore_svg: Ignore SVG images
+    image_quality: Image Quality
+    device_pixel_ratio: Maximum " Pixel ratio"
+    custom_function: Custom js function
+    library_option: Custom Library Options

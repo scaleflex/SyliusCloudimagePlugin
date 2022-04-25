@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+          <service id="scaleflex_sylius_cloudimage.form.extension.type.channel"
+                   class="Scaleflex\SyliusCloudimagePlugin\Form\Extension\ChannelTypeExtension">
+                <tag name="form.type_extension" extended_type="Sylius\Bundle\ChannelBundle\Form\Type\ChannelType"/>
+         </service>
+         <service id="scaleflex_sylius_cloudimage.twig.ci_src"
+                  class="Scaleflex\SyliusCloudimagePlugin\Twig\CiSrcExtension">
+               <argument type="service" id="sylius.context.channel.composite"/>
+               <tag name="twig.extension"/>
+         </service>
+    </services>
+</container>

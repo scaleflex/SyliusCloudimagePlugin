@@ -1,0 +1,47 @@
+{% if sylius.channel.cloudimageStatus and sylius.channel.cloudimageToken %}
+    {% if sylius.channel.cloudimageLazyLoading %}
+        <!-- Add lazyload library -->
+        <script>
+            window.lazySizesConfig = window.lazySizesConfig || {};
+            window.lazySizesConfig.init = false;
+        </script>
+        <script src="https://cdn.scaleflex.it/filerobot/js-cloudimage-responsive/lazysizes.min.js"></script>
+    {% endif %}
+
+    <!-- Add js-cloudimage-responsiv library -->
+    <script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-responsive/4.8.5/plain/js-cloudimage-responsive.min.js?vh=1ee401&func=proxy{{ sylius.channel.cloudimageLibraryOptions }}"></script>
+
+    <!-- Initialize cloudimage responsive -->
+    <script>
+        window.ciResponsive = new window.CIResponsive({
+            {% if sylius.channel.cloudimageLazyLoading %}
+            lazyLoading: true,
+            {% endif %}
+            {% if sylius.channel.cloudimageDoNotReplaceUrl %}
+            doNotReplaceURL: true,
+            {% endif %}
+            {% if sylius.channel.cloudimageIgnoreNodeImgSize %}
+            ignoreNodeImgSize: true,
+            {% endif %}
+            {% if sylius.channel.cloudimageIgnoreStyleImageSize %}
+            ignoreStyleImgSize: true,
+            {% endif %}
+            {% if sylius.channel.cloudimageDevicePixelRatio == '1' %}
+            devicePixelRatioList: [1],
+            {% endif %}
+            {% if sylius.channel.cloudimageDevicePixelRatio == '1.5' %}
+            devicePixelRatioList: [1, 1.5],
+            {% endif %}
+            {% if sylius.channel.cloudimageDevicePixelRatio == '2' %}
+            devicePixelRatioList: [1, 1.5, 2],
+            {% endif %}
+            {% if sylius.channel.cloudimageCustomFunction %}
+            processQueryString: function (props) {{ sylius.channel.cloudimageCustomFunction }},
+            {% endif %}
+            token: '{{ sylius.channel.cloudimageToken }}'
+        });
+        {% if sylius.channel.cloudimageLazyLoading %}
+        window.lazySizes.init();
+        {% endif %}
+    </script>
+{% endif %}
