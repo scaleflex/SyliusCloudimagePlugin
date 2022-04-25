@@ -1,0 +1,8 @@
+sylius_ui:
+  events:
+    sylius.shop.layout.head:
+      blocks:
+        cloudimage_script: '@ScaleflexSyliusCloudimagePlugin\Shop\cloudimageScript.html.twig'
+    sylius.shop.layout.after_body:
+      blocks:
+        cloudimage_script: '@ScaleflexSyliusCloudimagePlugin\Shop\cloudimageProcess.html.twig'
