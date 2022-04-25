@@ -43,6 +43,13 @@ sylius_channel:
                 model: App\Entity\Channel #Your Channel Model
 ```
 
+Upgrade database
+
+```shell
+bin/console doctrine:migration:diff
+bin/console doctrine:migration:migrate
+```
+
 #### Update Channel Form
 Include ```{{ include('@ScaleflexSyliusCloudimagePlugin/Admin/Channel/extendedChannelForm.html.twig') }}```
 in your ```templates/bundles/SyliusAdminBundle\Channel\_form.html.twig```
