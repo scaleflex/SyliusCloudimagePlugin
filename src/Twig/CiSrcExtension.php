@@ -41,7 +41,7 @@ class CiSrcExtension extends AbstractExtension
     {
         if ($this->channelContext->getChannel()->getCloudimageStatus()
             && !empty($this->channelContext->getChannel()->getCloudimageToken())) {
-            
+
             $isIgnoreSvg = $this->channelContext->getChannel()->getCloudimageIgnoreSvg();
             $ext = pathinfo($imageSource, PATHINFO_EXTENSION);
 
