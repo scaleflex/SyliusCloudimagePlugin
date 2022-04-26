@@ -39,19 +39,24 @@ class CiSrcExtension extends AbstractExtension
      */
     public function formatImageSource(string $imageSource): string
     {
-        $isIgnoreSvg = $this->channelContext->getChannel()->getCloudimageIgnoreSvg();
-        $ext = pathinfo($imageSource, PATHINFO_EXTENSION);
+        if ($this->channelContext->getChannel()->getCloudimageStatus()
+            && !empty($this->channelContext->getChannel()->getCloudimageToken())) {
+            
+            $isIgnoreSvg = $this->channelContext->getChannel()->getCloudimageIgnoreSvg();
+            $ext = pathinfo($imageSource, PATHINFO_EXTENSION);
 
-        //Add quality if quality less then 100
-        if ($this->channelContext->getChannel()->getCloudimageImageQuality() < 100) {
-            $imageSource .= "?q=".$this->channelContext->getChannel()->getCloudimageImageQuality();
+            //Add quality if quality less then 100
+            if ($this->channelContext->getChannel()->getCloudimageImageQuality() < 100) {
+                $imageSource .= "?q=".$this->channelContext->getChannel()->getCloudimageImageQuality();
+            }
+
+            //If prevent SVG is enabled
+            if ($isIgnoreSvg && $ext === 'svg') {
+                return 'src='.$imageSource;
+            }
+
+            return 'ci-src='.$imageSource;
         }
-
-        //If prevent SVG is enabled
-        if ($isIgnoreSvg && $ext === 'svg') {
-            return 'src='.$imageSource;
-        }
-
-        return 'ci-src='.$imageSource;
+        return 'src='.$imageSource;
     }
 }
