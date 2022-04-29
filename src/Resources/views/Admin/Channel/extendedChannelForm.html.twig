@@ -16,10 +16,10 @@
     {{ form_row(form.cloudimageIgnoreSvg) }}
     {{ form_help(form.cloudimageIgnoreSvg) }}
     {{ form_row(form.cloudimageImageQuality) }}
-    {{ form_help(form.cloudimageImageQuality) }}
+    <p class="help-text">{{ "scaleflex_sylius_cloudimage.help.image_quality"|trans|raw }}</p>
     {{ form_row(form.cloudimageDevicePixelRatio) }}
     {{ form_help(form.cloudimageDevicePixelRatio) }}
-    <h5>{{ "scaleflex_sylius_cloudimage.ui.custom"|trans }}</h5>
+    <h5 style="color: red">{{ "scaleflex_sylius_cloudimage.ui.custom"|trans }}</h5>
     {{ form_row(form.cloudimageCustomFunction) }}
     {{ form_row(form.cloudimageLibraryOptions) }}
 </div>
