@@ -12,7 +12,7 @@ trait ExtendedChannelTrait
     /** @ORM\Column(type="string", name="cloudimage_token", nullable=true) */
     protected $cloudimageToken;
 
-    /** @ORM\Column(type="boolean", name="cloudimage_do_not_replace_url", nullable=true, options={"default": 1}) */
+    /** @ORM\Column(type="boolean", name="cloudimage_do_not_replace_url", nullable=true, options={"default": 0}) */
     protected $cloudimageDoNotReplaceUrl;
 
     /** @ORM\Column(type="boolean", name="cloudimage_ignore_node_img_size", nullable=true, options={"default": 0}) */
