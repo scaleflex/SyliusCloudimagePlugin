@@ -24,42 +24,52 @@ final class ChannelTypeExtension extends AbstractTypeExtension
             ->add('cloudimageToken', TextType::class, [
                 'required' => false,
                 'label' => 'scaleflex_sylius_cloudimage.form.token',
+                'help' => 'scaleflex_sylius_cloudimage.help.token'
             ])
             ->add('cloudimageDoNotReplaceUrl', CheckboxType::class, [
                 'required' => false,
-                'label'    => 'scaleflex_sylius_cloudimage.form.do_not_replace_url'
+                'label'    => 'scaleflex_sylius_cloudimage.form.do_not_replace_url',
+                'help'    => 'scaleflex_sylius_cloudimage.help.do_not_replace_url'
             ])
             ->add('cloudimageIgnoreNodeImgSize', CheckboxType::class, [
                 'required' => false,
-                'label'    => 'scaleflex_sylius_cloudimage.form.ignore_node_img_size'
+                'label'    => 'scaleflex_sylius_cloudimage.form.ignore_node_img_size',
+                'help'    => 'scaleflex_sylius_cloudimage.help.ignore_node_img_size'
             ])
             ->add('cloudimageIgnoreStyleImageSize', CheckboxType::class, [
                 'required' => false,
-                'label'    => 'scaleflex_sylius_cloudimage.form.ignore_styled_image_size'
+                'label'    => 'scaleflex_sylius_cloudimage.form.ignore_styled_image_size',
+                'help'    => 'scaleflex_sylius_cloudimage.help.ignore_styled_image_size'
             ])
             ->add('cloudImageLazyLoading', CheckboxType::class, [
                 'required' => false,
-                'label'    => 'scaleflex_sylius_cloudimage.form.lazy_load'
+                'label'    => 'scaleflex_sylius_cloudimage.form.lazy_load',
+                'help'    => 'scaleflex_sylius_cloudimage.help.lazy_load'
             ])
             ->add('cloudimageIgnoreSvg', CheckboxType::class, [
                 'required' => false,
-                'label'    => 'scaleflex_sylius_cloudimage.form.ignore_svg'
+                'label'    => 'scaleflex_sylius_cloudimage.form.ignore_svg',
+                'help'    => 'scaleflex_sylius_cloudimage.help.ignore_svg'
             ])
             ->add('cloudimageImageQuality', ImageQualityChoiceType::class, [
                 'required' => false,
-                'label'    => 'scaleflex_sylius_cloudimage.form.image_quality'
+                'label'    => 'scaleflex_sylius_cloudimage.form.image_quality',
+                'help'    => 'scaleflex_sylius_cloudimage.help.image_quality'
             ])
             ->add('cloudimageDevicePixelRatio', PixelRatioChoiceType::class, [
                 'required' => false,
-                'label'    => 'scaleflex_sylius_cloudimage.form.device_pixel_ratio'
+                'label'    => 'scaleflex_sylius_cloudimage.form.device_pixel_ratio',
+                'help'    => 'scaleflex_sylius_cloudimage.help.device_pixel_ratio'
             ])
             ->add('cloudimageCustomFunction', TextareaType::class, [
                 'required' => false,
-                'label'    => 'scaleflex_sylius_cloudimage.form.custom_function'
+                'label'    => 'scaleflex_sylius_cloudimage.form.custom_function',
+                'help'    => 'scaleflex_sylius_cloudimage.help.custom_function'
             ])
             ->add('cloudimageLibraryOptions', TextType::class, [
                 'required' => false,
-                'label'    => 'scaleflex_sylius_cloudimage.form.library_option'
+                'label'    => 'scaleflex_sylius_cloudimage.form.library_option',
+                'help'    => 'scaleflex_sylius_cloudimage.help.library_option'
             ])
         ;
     }

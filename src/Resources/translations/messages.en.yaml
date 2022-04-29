@@ -2,8 +2,11 @@
 scaleflex_sylius_cloudimage:
   ui:
     title: Scaleflex Cloudimage
+    option: Options
+    advanced: Advanced Options
+    custom: Customization(dander zone)
   form:
-    status: Status
+    status: Activation
     token: Token
     do_not_replace_url: Use origin URL
     ignore_node_img_size: Ignore Image Size Node
@@ -14,3 +17,14 @@ scaleflex_sylius_cloudimage:
     device_pixel_ratio: Maximum " Pixel ratio"
     custom_function: Custom js function
     library_option: Custom Library Options
+  help:
+    token: Cloudimage token to link your account and be able to process optimizations according to your settings. Can be found in your Cloudimage admin panel.
+    do_not_replace_url: If enabled, the plugin will only add query parameters to the image source URL, avoiding double CDNization in some cases, like if you have aliases configured.
+    ignore_node_img_size: Can be useful for improving compatibility with some themes.
+    ignore_styled_image_size: Can be useful for improving compatibility with some themes.
+    lazy_load: If enabled, only images close to the current viewpoint will be loaded.
+    ignore_svg: By default, No.
+    image_quality: The smaller the value, the more your image will be compressed. <br/> Careful — the quality of the image will decrease as well. By default, 90.
+    device_pixel_ratio: List of supported device pixel ratios, eg 2 for Retina devices
+    custom_function: The valid js function starting with { and finishing with }
+    library_option: Modifies the library URL and must begin with the symbol &. Please read document before use.

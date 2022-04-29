@@ -1,18 +1,25 @@
 <div class="ui hidden divider"></div>
-<h4 class="ui top attached large header">Scaleflex Cloudimage</h4>
+<h4 class="ui top attached large header">{{ "scaleflex_sylius_cloudimage.ui.title"|trans }}</h4>
 <div class="ui attached segment">
     {{ form_row(form.cloudimageStatus) }}
     {{ form_row(form.cloudimageToken) }}
-    <h5>Options</h5>
+    <h5>{{ "scaleflex_sylius_cloudimage.ui.option"|trans }}</h5>
     {{ form_row(form.cloudimageDoNotReplaceUrl) }}
+    {{ form_help(form.cloudimageDoNotReplaceUrl) }}
     {{ form_row(form.cloudimageIgnoreNodeImgSize) }}
+    {{ form_help(form.cloudimageIgnoreNodeImgSize) }}
     {{ form_row(form.cloudimageIgnoreStyleImageSize) }}
+    {{ form_help(form.cloudimageIgnoreStyleImageSize) }}
     {{ form_row(form.cloudImageLazyLoading) }}
-    <h5>Advanced Options</h5>
+    {{ form_help(form.cloudImageLazyLoading) }}
+    <h5>{{ "scaleflex_sylius_cloudimage.ui.advanced"|trans }}</h5>
     {{ form_row(form.cloudimageIgnoreSvg) }}
+    {{ form_help(form.cloudimageIgnoreSvg) }}
     {{ form_row(form.cloudimageImageQuality) }}
+    <p class="help-text">{{ "scaleflex_sylius_cloudimage.help.image_quality"|trans|raw }}</p>
     {{ form_row(form.cloudimageDevicePixelRatio) }}
-    <h5>Custom</h5>
+    {{ form_help(form.cloudimageDevicePixelRatio) }}
+    <h5 style="color: red">{{ "scaleflex_sylius_cloudimage.ui.custom"|trans }}</h5>
     {{ form_row(form.cloudimageCustomFunction) }}
     {{ form_row(form.cloudimageLibraryOptions) }}
 </div>
