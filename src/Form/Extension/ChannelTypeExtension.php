@@ -41,7 +41,7 @@ final class ChannelTypeExtension extends AbstractTypeExtension
                 'label'    => 'scaleflex_sylius_cloudimage.form.ignore_styled_image_size',
                 'help'    => 'scaleflex_sylius_cloudimage.help.ignore_styled_image_size'
             ])
-            ->add('cloudImageLazyLoading', CheckboxType::class, [
+            ->add('cloudimageLazyLoading', CheckboxType::class, [
                 'required' => false,
                 'label'    => 'scaleflex_sylius_cloudimage.form.lazy_load',
                 'help'    => 'scaleflex_sylius_cloudimage.help.lazy_load'
@@ -56,10 +56,20 @@ final class ChannelTypeExtension extends AbstractTypeExtension
                 'label'    => 'scaleflex_sylius_cloudimage.form.image_quality',
                 'help'    => 'scaleflex_sylius_cloudimage.help.image_quality'
             ])
+            ->add('cloudimageOrgIfSml', CheckboxType::class, [
+                'required' => false,
+                'label'    => 'scaleflex_sylius_cloudimage.form.org_if_sml',
+                'help'    => 'scaleflex_sylius_cloudimage.help.org_if_sml'
+            ])
             ->add('cloudimageDevicePixelRatio', PixelRatioChoiceType::class, [
                 'required' => false,
                 'label'    => 'scaleflex_sylius_cloudimage.form.device_pixel_ratio',
                 'help'    => 'scaleflex_sylius_cloudimage.help.device_pixel_ratio'
+            ])
+            ->add('cloudimageRemoveV7', CheckboxType::class, [
+                'required' => false,
+                'label'    => 'scaleflex_sylius_cloudimage.form.remove_v7',
+                'help'    => 'scaleflex_sylius_cloudimage.help.remove_v7'
             ])
             ->add('cloudimageCustomFunction', TextareaType::class, [
                 'required' => false,

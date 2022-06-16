@@ -35,6 +35,17 @@ interface ExtendedChannelInterface
      */
     public function setCloudimageDoNotReplaceUrl(bool $cloudimageDoNotReplaceUrl): void;
 
+
+    /**
+     * @return bool|null
+     */
+    public function getCloudimageRemoveV7(): ?bool;
+
+    /**
+     * @param bool $cloudimageRemoveV7
+     */
+    public function setCloudimageRemoveV7(bool $cloudimageRemoveV7): void;
+
     /**
      * @return bool|null
      */
@@ -58,12 +69,23 @@ interface ExtendedChannelInterface
     /**
      * @return bool|null
      */
-    public function getCloudImageLazyLoading(): ?bool;
+    public function getCloudimageLazyLoading(): ?bool;
+
 
     /**
-     * @param bool $cloudImageLazyLoading
+     * @param bool $cloudimageOrgIfSml
      */
-    public function setCloudImageLazyLoading(bool $cloudImageLazyLoading): void;
+    public function setCloudimageOrgIfSml(bool $cloudimageOrgIfSml): void;
+
+    /**
+     * @return bool|null
+     */
+    public function getCloudimageOrgIfSml(): ?bool;
+
+    /**
+     * @param bool $cloudimageLazyLoading
+     */
+    public function setCloudimageLazyLoading(bool $cloudimageLazyLoading): void;
 
     /**
      * @return string|null

@@ -9,7 +9,7 @@
     {% endif %}
 
     <!-- Add js-cloudimage-responsiv library -->
-    <script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-responsive/4.8.5/plain/js-cloudimage-responsive.min.js?vh=1ee401&func=proxy{{ sylius.channel.cloudimageLibraryOptions }}"></script>
+    <script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-responsive/4.8.5/plain/js-cloudimage-responsive.min.js?vh=1ee401&func=proxy"></script>
 
     <!-- Initialize cloudimage responsive -->
     <script>
@@ -20,11 +20,19 @@
             {% if sylius.channel.cloudimageDoNotReplaceUrl %}
             doNotReplaceURL: true,
             {% endif %}
+            params: {% if sylius.channel.cloudimageOrgIfSml %}
+                        'org_if_sml=1&{{ sylius.channel.cloudimageLibraryOptions }}'
+                    {% else %}
+                        '{{ sylius.channel.cloudimageLibraryOptions }}'
+                    {% endif %},
             {% if sylius.channel.cloudimageIgnoreNodeImgSize %}
             ignoreNodeImgSize: true,
             {% endif %}
             {% if sylius.channel.cloudimageIgnoreStyleImageSize %}
             ignoreStyleImgSize: true,
+            {% endif %}
+            {% if sylius.channel.cloudimageRemoveV7 %}
+            apiVersion: null,
             {% endif %}
             {% if sylius.channel.cloudimageDevicePixelRatio == '1' %}
             devicePixelRatioList: [1],

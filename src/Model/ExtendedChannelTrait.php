@@ -22,7 +22,7 @@ trait ExtendedChannelTrait
     protected $cloudimageIgnoreStyleImageSize;
 
     /** @ORM\Column(type="boolean", name="cloud_image_lazy_loading", nullable=true, options={"default": 1}) */
-    protected $cloudImageLazyLoading;
+    protected $cloudimageLazyLoading;
 
     /** @ORM\Column(type="string", name="cloudimage_custom_function", nullable=true) */
     protected $cloudimageCustomFunction;
@@ -32,6 +32,12 @@ trait ExtendedChannelTrait
 
     /** @ORM\Column(type="boolean", name="cloudimage_ignore_svg", nullable=true, options={"default": 0}) */
     protected $cloudimageIgnoreSvg;
+
+    /** @ORM\Column(type="boolean", name="cloudimage_remove_v7", nullable=true, options={"default": 1}) */
+    protected $cloudimageRemoveV7;
+
+    /** @ORM\Column(type="boolean", name="cloudimage_org_if_sml", nullable=true, options={"default": 1}) */
+    protected $cloudimageOrgIfSml;
 
     /** @ORM\Column(type="string", name="cloudimage_device_pixel_ratio", nullable=true, options={"default": "2"}) */
     protected $cloudimageDevicePixelRatio;
@@ -91,6 +97,23 @@ trait ExtendedChannelTrait
     /**
      * @return bool|null
      */
+    public function getCloudimageRemoveV7(): ?bool
+    {
+        return $this->cloudimageRemoveV7;
+    }
+
+
+    /**
+     * @param bool $cloudimageRemoveV7
+     */
+    public function setCloudimageRemoveV7(bool $cloudimageRemoveV7): void
+    {
+        $this->cloudimageRemoveV7 = $cloudimageRemoveV7;
+    }
+
+    /**
+     * @return bool|null
+     */
     public function getCloudimageIgnoreNodeImgSize(): ?bool
     {
         return $this->cloudimageIgnoreNodeImgSize;
@@ -123,17 +146,17 @@ trait ExtendedChannelTrait
     /**
      * @return bool|null
      */
-    public function getCloudImageLazyLoading(): ?bool
+    public function getCloudimageLazyLoading(): ?bool
     {
-        return $this->cloudImageLazyLoading;
+        return $this->cloudimageLazyLoading;
     }
 
     /**
-     * @param bool $cloudImageLazyLoading
+     * @param bool $cloudimageLazyLoading
      */
-    public function setCloudImageLazyLoading(bool $cloudImageLazyLoading): void
+    public function setCloudimageLazyLoading(bool $cloudimageLazyLoading): void
     {
-        $this->cloudImageLazyLoading = $cloudImageLazyLoading;
+        $this->cloudimageLazyLoading = $cloudimageLazyLoading;
     }
 
     /**
@@ -214,5 +237,20 @@ trait ExtendedChannelTrait
     public function setCloudimageLibraryOptions(string $cloudimageLibraryOptions): void
     {
         $this->cloudimageLibraryOptions = $cloudimageLibraryOptions;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getCloudimageOrgIfSml(): ?bool {
+        return $this->cloudimageOrgIfSml;
+    }
+
+    /**
+     * @param bool $cloudimageOrgIfSml
+     * @return void
+     */
+    public function setCloudimageOrgIfSml(bool $cloudimageOrgIfSml) : void {
+        $this->cloudimageOrgIfSml = $cloudimageOrgIfSml;
     }
 }
