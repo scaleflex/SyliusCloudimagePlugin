@@ -83,8 +83,6 @@ _Example:_
 **Advanced Configuration** [Optional]
 This setting is for advanced users only and allows to inject a custom JS function into the Magento templates in order to support some specific Magento templates. Feel free to contact us in order to get the custom JS function to inject to address issues with your specific template.
 
-**Inject Custom JS function**: If enabled, you will be able to customize the JS function used dynamically to get the DOM information.
-
 **Custom js function**: The js function to customize Cloudimage library.
 
 **Image Quality**: Customizes the image quality, therefore compression -size- applied by default. (warning, a setting under 80 might have a potentially visible impact)
