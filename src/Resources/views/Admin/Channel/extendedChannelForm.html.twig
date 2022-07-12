@@ -10,8 +10,10 @@
     {{ form_help(form.cloudimageIgnoreNodeImgSize) }}
     {{ form_row(form.cloudimageIgnoreStyleImageSize) }}
     {{ form_help(form.cloudimageIgnoreStyleImageSize) }}
-    {{ form_row(form.cloudImageLazyLoading) }}
-    {{ form_help(form.cloudImageLazyLoading) }}
+    {{ form_row(form.cloudimageLazyLoading) }}
+    {{ form_help(form.cloudimageLazyLoading) }}
+    {{ form_row(form.cloudimageRemoveV7) }}
+    {{ form_help(form.cloudimageRemoveV7) }}
     <h5>{{ "scaleflex_sylius_cloudimage.ui.advanced"|trans }}</h5>
     {{ form_row(form.cloudimageIgnoreSvg) }}
     {{ form_help(form.cloudimageIgnoreSvg) }}
@@ -19,6 +21,8 @@
     <p class="help-text">{{ "scaleflex_sylius_cloudimage.help.image_quality"|trans|raw }}</p>
     {{ form_row(form.cloudimageDevicePixelRatio) }}
     {{ form_help(form.cloudimageDevicePixelRatio) }}
+    {{ form_row(form.cloudimageOrgIfSml) }}
+    {{ form_help(form.cloudimageOrgIfSml) }}
     <h5 style="color: red">{{ "scaleflex_sylius_cloudimage.ui.custom"|trans }}</h5>
     {{ form_row(form.cloudimageCustomFunction) }}
     {{ form_row(form.cloudimageLibraryOptions) }}
