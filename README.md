@@ -79,6 +79,7 @@ _Example:_
 
 *lazy loading can have variable results on some websites as for the first rows of images loaded, therefore it is recommended to make use of an integrated new class provided: “lazy-off”. You can specify the "lazy-off" class either in the page builder through the back-office, or in the templates directly (eg. category page and product page).
 
+**Remove V7:** Removes the "/v7" part in URL format. Activate for token created after October 20th 2021.*
 
 **Advanced Configuration** [Optional]
 This setting is for advanced users only and allows to inject a custom JS function into the Magento templates in order to support some specific Magento templates. Feel free to contact us in order to get the custom JS function to inject to address issues with your specific template.
