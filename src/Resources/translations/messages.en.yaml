@@ -4,7 +4,7 @@ scaleflex_sylius_cloudimage:
     title: Scaleflex Cloudimage
     option: Options
     advanced: Advanced Options
-    custom: Customization(dander zone)
+    custom: Customization (danger zone)
   form:
     status: Activation
     token: Token
