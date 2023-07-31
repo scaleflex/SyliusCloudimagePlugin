@@ -26,6 +26,11 @@ final class ChannelTypeExtension extends AbstractTypeExtension
                 'label' => 'scaleflex_sylius_cloudimage.form.token',
                 'help' => 'scaleflex_sylius_cloudimage.help.token'
             ])
+            ->add('cloudimagePrerender', CheckboxType::class, [
+                'required' => false,
+                'label'    => 'scaleflex_sylius_cloudimage.form.prerender',
+                'help'    => 'scaleflex_sylius_cloudimage.help.prerender'
+            ])
             ->add('cloudimageDoNotReplaceUrl', CheckboxType::class, [
                 'required' => false,
                 'label'    => 'scaleflex_sylius_cloudimage.form.do_not_replace_url',

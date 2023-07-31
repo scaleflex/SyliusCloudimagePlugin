@@ -1,4 +1,4 @@
-{% if sylius.channel.cloudimageStatus and sylius.channel.cloudimageToken %}
+{% if sylius.channel.cloudimageStatus and sylius.channel.cloudimageToken  and not sylius.channel.cloudimagePrerender %}
     <script>
         window.ciResponsive.process();
     </script>

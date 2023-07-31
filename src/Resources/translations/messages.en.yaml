@@ -15,6 +15,7 @@ scaleflex_sylius_cloudimage:
     ignore_svg: Ignore SVG images
     image_quality: Image Quality
     device_pixel_ratio: Maximum " Pixel ratio"
+    prerender: Prerender
     custom_function: Custom js function
     remove_v7: Remove V7
     library_option: Custom Library Options
@@ -32,3 +33,4 @@ scaleflex_sylius_cloudimage:
     custom_function: The valid js function starting with { and finishing with }
     library_option: Modifies the library URL and must begin with the symbol &. Please read document before use.
     org_if_sml: If you set Maximum "Pixel ratio" equal to 2, but some of your assets does not have min retina size(at least 2560x960), please enable this to prevent image resized. By default, yes.'
+    prerender: If enabled, image url will be updated to {token}.cloudimg.io and disable CI Responsive JS.

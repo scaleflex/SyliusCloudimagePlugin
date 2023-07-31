@@ -69,6 +69,8 @@ _Example:_
 
 **Options**
 
+**Prerender:** If enabled, image url will be updated to {token}.cloudimg.io and disable CI Responsive JS.
+
 **Use origin URL:** If enabled, the module will only add query parameters to the image source URL without prefixing it with `{token}.cloudimg.io`.
 
 **Ignore Image Size Node:** useful for improving compatibility with some themes.

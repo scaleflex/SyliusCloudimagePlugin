@@ -1,4 +1,4 @@
-{% if sylius.channel.cloudimageStatus and sylius.channel.cloudimageToken %}
+{% if sylius.channel.cloudimageStatus and sylius.channel.cloudimageToken and not sylius.channel.cloudimagePrerender %}
     {% if sylius.channel.cloudimageLazyLoading %}
         <!-- Add lazyload library -->
         <script>
@@ -9,7 +9,8 @@
     {% endif %}
 
     <!-- Add js-cloudimage-responsiv library -->
-    <script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-responsive/4.8.12/plain/js-cloudimage-responsive.min.js?vh=1ee401&func=proxy"></script>
+    <script src="https://cdn.scaleflex.it/plugins/js-cloudimage-responsive/latest/js-cloudimage-responsive.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.scaleflex.it/plugins/js-cloudimage-responsive/latest/js-cloudimage-responsive.min.css?vh=a076ef&func=proxy"></link>
 
     <!-- Initialize cloudimage responsive -->
     <script>

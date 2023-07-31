@@ -71,6 +71,16 @@ interface ExtendedChannelInterface
      */
     public function getCloudimageLazyLoading(): ?bool;
 
+    /**
+     * @param bool $cloudimagePrerender
+     */
+    public function setCloudimagePrerender(bool $cloudimagePrerender): void;
+
+    /**
+     * @return bool|null
+     */
+    public function getCloudimagePrerender(): ?bool;
+
 
     /**
      * @param bool $cloudimageOrgIfSml

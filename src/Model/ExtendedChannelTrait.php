@@ -36,6 +36,9 @@ trait ExtendedChannelTrait
     /** @ORM\Column(type="boolean", name="cloudimage_remove_v7", nullable=true, options={"default": 1}) */
     protected $cloudimageRemoveV7;
 
+    /** @ORM\Column(type="boolean", name="cloudimage_prerender", nullable=true, options={"default": 0}) */
+    protected $cloudimagePrerender;
+
     /** @ORM\Column(type="boolean", name="cloudimage_org_if_sml", nullable=true, options={"default": 1}) */
     protected $cloudimageOrgIfSml;
 
@@ -100,6 +103,14 @@ trait ExtendedChannelTrait
     public function getCloudimageRemoveV7(): ?bool
     {
         return $this->cloudimageRemoveV7;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getCloudimagePrerender(): ?bool
+    {
+        return $this->cloudimagePrerender;
     }
 
 
@@ -205,6 +216,14 @@ trait ExtendedChannelTrait
     public function setCloudimageIgnoreSvg(bool $cloudimageIgnoreSvg): void
     {
         $this->cloudimageIgnoreSvg = $cloudimageIgnoreSvg;
+    }
+
+    /**
+     * @param bool $cloudimagePrerender
+     */
+    public function setCloudimagePrerender(bool $cloudimagePrerender): void
+    {
+        $this->cloudimagePrerender = $cloudimagePrerender;
     }
 
     /**
